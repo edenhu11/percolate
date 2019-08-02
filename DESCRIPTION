@@ -16,5 +16,6 @@ Suggests:
 Imports: 
     assertthat,
     ggplot2,
-    tidyr
+    tidyr,
+    gridExtra
 RoxygenNote: 6.1.1

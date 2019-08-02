@@ -15,3 +15,40 @@ board with all possible open squares filled
 \description{
 returns the board with water filled
 }
+\examples{
+mat_example_list <- list(matrix(c(1,1,1,1,0,
+                                 0,0,0,1,0,
+                                 1,1,1,1,0,
+                                 0,1,0,0,0,
+                                 0,1,1,1,1), 5, 5),
+                       matrix(c(1,1,1,1,0,
+                                0,0,0,1,0,
+                                0,1,1,1,0,
+                                0,1,0,0,0,
+                                0,1,1,1,1), 5, 5),
+                       matrix(c(1,1,1,1,0,
+                                0,0,0,1,0,
+                                0,1,1,0,0,
+                                0,1,0,0,0,
+                                0,1,1,1,1), 5, 5))
+
+board_example_list <- lapply(mat_example_list, board)
+percolate_bool <- function(v) {
+ lst <- percolate(v)
+ return (lst$result)
+}
+lapply(board_example_list, percolate_bool)
+
+percolate_board <- function(v) {
+ lst <- percolate(v)
+ return (lst$result_board)
+}
+board_example_list_after <- lapply(board_example_list, percolate_board)
+
+after_plot <- lapply(board_example_list_after, plot)
+before_plot <- lapply(board_example_list, plot)
+gg_list <- vector(mode = "list")
+gg_list <- c(gg_list, before_plot)
+gg_list <- c(gg_list, after_plot)
+grid.arrange(grobs = gg_list, nrow = 2)
+}

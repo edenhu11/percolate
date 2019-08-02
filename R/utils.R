@@ -73,6 +73,14 @@ transform_vec <- function(v, d) {
   board(mat)
 }
 
+#' check if a string that only contains * and . and space
+#'
+#' @param v string, containing only * and . and space
+#'
+#' @return boolean TRUE it only contains * and . and space
+#' @export
+#'
+#' @examples check_contain("***.")
 check_contain <- function(v) {
   for (i in 1:nchar(v)) {
     if (substr(v, i, i) != "*" && substr(v, i, i) != "." && substr(v, i, i) != " ") {
@@ -82,6 +90,14 @@ check_contain <- function(v) {
   return (TRUE)
 }
 
+#' read in a file of matrices
+#'
+#' @param file link
+#'
+#' @return list of transformed board objs
+#' @export
+#'
+#' @examples read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_example.txt")
 read_boards <- function(file) {
   txt <- readLines(file)
   txt <- txt[txt != ""]
@@ -102,7 +118,9 @@ read_boards <- function(file) {
         }
         if (bool == FALSE) {
           ve <- txt[(i+2):(i+1+dim)]
+          #print(ve)
           lst <- transform_vec(ve, dim)
+          #print(lst)
           res_lst <- c(res_lst, list(lst))
         }
         else {
@@ -118,4 +136,3 @@ read_boards <- function(file) {
               msg = "file is not properly formatted")
   res_lst
 }
-

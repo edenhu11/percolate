@@ -1,3 +1,5 @@
+context("test board fn")
+
 test_that("board() works", {
   mat1 <- matrix(0, 5, 5)
   mat2 <- board(mat1)

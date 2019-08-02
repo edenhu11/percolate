@@ -16,3 +16,4 @@ Suggests:
 Imports: 
     assertthat,
     ggplot2
+RoxygenNote: 6.1.1

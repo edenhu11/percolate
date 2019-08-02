@@ -15,5 +15,6 @@ Suggests:
     testthat (>= 2.1.0)
 Imports: 
     assertthat,
-    ggplot2
+    ggplot2,
+    tidyr
 RoxygenNote: 6.1.1

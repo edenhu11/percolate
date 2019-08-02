@@ -118,9 +118,7 @@ read_boards <- function(file) {
         }
         if (bool == FALSE) {
           ve <- txt[(i+2):(i+1+dim)]
-          #print(ve)
           lst <- transform_vec(ve, dim)
-          #print(lst)
           res_lst <- c(res_lst, list(lst))
         }
         else {

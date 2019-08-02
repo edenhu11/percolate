@@ -45,35 +45,35 @@ test_that("is_valid() errors for containing strings", {
 test_that("read_boards() works", {
   load(url("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolate_test.Rdata"))
   lst_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test.txt")
-  identical(board_list, lst_boards)
+  expect_identical(board_list, lst_boards)
 })
 
 test_that("read_boards() works", {
   lst_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test1.txt")
-  identical(list(NA), lst_boards)
+  expect_equal(list(NA), lst_boards)
 })
 
 test_that("read_boards() works", {
   lst_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test2.txt")
-  identical(list(NA), lst_boards)
+  expect_equal(list(NA), lst_boards)
 })
 
 test_that("read_boards() works", {
-  lst_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test3.txt")
-  identical(list(NA), lst_boards)
+  expect_warning(lst_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test3.txt"))
+  expect_equal(list(NA), lst_boards)
 })
 
 test_that("read_boards() works", {
   lst_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test4.txt")
-  identical(list(NA), lst_boards)
+  expect_equal(list(NA), lst_boards)
 })
 
 test_that("read_boards() works", {
   lst_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test5.txt")
-  identical(list(NA), lst_boards)
+  expect_equal(list(NA), lst_boards)
 })
 
 test_that("read_boards() works", {
   lst_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test6.txt")
-  identical(list(NA), lst_boards)
+  expect_equal(list(NA), lst_boards)
 })

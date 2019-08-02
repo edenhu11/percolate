@@ -4,7 +4,8 @@
 #'
 #' @return ggplot of the board with squares 0 = black, 1 = white, 2 = blue
 #' @export
-#'
+#' @import ggplot2
+#' @import tidyr
 #' @examples plot.board(board(matrix(c(0,1,1,1,0,0,1,1,0,1,0,0,1,0,0,0,0,0,2,2,2,2,2,2,0), 5, 5))
 plot.board <- function(x) {
   is_valid(x)

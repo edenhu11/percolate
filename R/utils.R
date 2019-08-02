@@ -5,7 +5,7 @@
 #'
 #' @return board with n rows and n columns and floor(p*n^2) 0's, the rest are 1's
 #' @export
-#'
+#' @import assertthat
 #' @examples generate_board_mat(n = 5, p = 0.25)
 generate_board_mat <- function(n = 5, p = 0.25) {
   assert_that(length(n) == 1 && is.numeric(n)
@@ -25,7 +25,7 @@ generate_board_mat <- function(n = 5, p = 0.25) {
 #'
 #' @return boolean values. True if matrix is square and only contains 0, 1, 2
 #' @export
-#'
+#' @import assertthat
 #' @examples is_valid(matrix(0, 1, 2))
 is_valid <- function(mat) {
   assert_that(is.matrix(mat) && nrow(mat) == ncol(mat) && all(mat == 1 | mat == 0 | mat == 2),

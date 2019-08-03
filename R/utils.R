@@ -107,7 +107,7 @@ read_boards <- function(file) {
   bool <- FALSE
   for (i in 1:length(txt)) {
     if (txt[i] == "----" && i != length(txt)) {
-      if (!is.na(as.numeric(txt[i+1])) && as.numeric(txt[i+1]) > 0) {
+      if (!grepl("\\D", txt[i+1]) && as.numeric(txt[i+1]) > 0) {
         dim <- as.numeric(txt[i+1])
         for (j in ((i+2):(i+1+dim))) {
           if ((i+2+dim > length(txt)) | (txt[i+2+dim] != "----") |

@@ -16,7 +16,6 @@ test_that("board() errors for containing numbers other 0, 1, 2", {
   expect_error(board(mat1))
 })
 
-test_that("board() errors for containing strings", {
-  mat1 <- matrix("a", 3, 3)
-  expect_error(board(mat1))
+test_that("board() errors for non-matrix", {
+  expect_error(c(0, 0))
 })

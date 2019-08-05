@@ -37,9 +37,8 @@ test_that("is_valid() errors for containing numbers other 0, 1, 2", {
   expect_error(is_valid(mat1))
 })
 
-test_that("is_valid() errors for containing strings", {
-  mat1 <- matrix("a", 3, 3)
-  expect_error(is_valid(mat1))
+test_that("is_valid() errors for non-matrix", {
+  expect_error(is_valid(c(0, 0)))
 })
 
 test_that("read_boards() works", {

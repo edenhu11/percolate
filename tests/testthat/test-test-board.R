@@ -17,5 +17,5 @@ test_that("board() errors for containing numbers other 0, 1, 2", {
 })
 
 test_that("board() errors for non-matrix", {
-  expect_error(c(0, 0))
+  expect_error(board(c(0, 0)))
 })

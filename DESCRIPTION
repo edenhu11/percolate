@@ -1,13 +1,13 @@
 Package: percolate
-Title: What the Package Does (One Line, Title Case)
+Title: Percolation Simulation
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Eden",
+           family = "Hu",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "edenhu11@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: This package simulates the percolation function. 
 License: What license it uses
 Encoding: UTF-8
 LazyData: true

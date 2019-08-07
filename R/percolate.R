@@ -1,3 +1,11 @@
+#' add percolate method to percolate board
+#'
+#' @param x board obj
+#'
+#' @return percolated board
+#' @export
+#'
+#' @examples
 percolate <- function(x) {
   UseMethod("percolate", x)
 }
